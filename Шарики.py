@@ -39,7 +39,7 @@ if __name__ == '__main__':
                 y = r
             if x + r >= width:
                 dx = -1
-                y = width - r
+                x = width - r
             if y + r >= height:
                 dy = -1
                 y = height - r

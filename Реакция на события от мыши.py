@@ -41,8 +41,9 @@ class Board:
         return None
 
     def on_click(self, cell_coords):
-        col, row = cell_coords
-        self.board[row][col] = (self.board[row][col] + 1) % 3
+        if cell_coords:
+            col, row = cell_coords
+            self.board[row][col] = (self.board[row][col] + 1) % 3
 
     def get_click(self, mouse_pos):
         cell = self.get_cell(mouse_pos)
